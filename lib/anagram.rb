@@ -7,10 +7,10 @@ class Anagram
   end 
   
   def match(word_array) 
+    matches = []
     word_array.map{|w|
-      if w.split("") == word.split("")
-        return w 
-      end
+      matches << w.split("") == word.split("")
     }
+    matches
   end
 end
